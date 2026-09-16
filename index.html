@@ -632,6 +632,28 @@
     .service-universe .service-icon{ width:23px; height:23px; }
   }
 
+
+  /* ---------- Viewport lock / prevent page sideways movement ---------- */
+  html, body {
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+    overscroll-behavior-x:none;
+  }
+  body {
+    position:relative;
+  }
+  .page {
+    width:min(100%, 460px);
+    max-width:460px;
+    overflow-x:hidden;
+  }
+  .carousel, .portfolio-carousel {
+    overscroll-behavior-x:contain;
+    touch-action:pan-x pan-y;
+  }
+  img, video, svg { max-width:100%; }
+
 </style>
 </head>
 <body>
